@@ -1,0 +1,13 @@
+digraph G {
+"base_link" -> "front_cam_link"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_stabilized" -> "base_link"[label=" Broadcaster: /ground_truth_to_tf\nAverage rate: 100.2\nBuffer length: 5.01\nMost recent transform: 342.594\nOldest transform: 337.584\n"];
+"front_cam_link" -> "front_cam_optical_frame"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "laser0_frame"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "sonar_link"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"world" -> "base_footprint"[label=" Broadcaster: /ground_truth_to_tf\nAverage rate: 100.2\nBuffer length: 5.01\nMost recent transform: 342.594\nOldest transform: 337.584\n"];
+"base_footprint" -> "base_stabilized"[label=" Broadcaster: /ground_truth_to_tf\nAverage rate: 100.2\nBuffer length: 5.01\nMost recent transform: 342.594\nOldest transform: 337.584\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 342.617"[ shape=plaintext ] ;
+}->"world";
+}

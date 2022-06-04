@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find hector_gazebo_worlds)/launch/star1.launch">
+   <arg name="world" value="$(find robot_tasarim)/worlds/take1_world.world"/> 
+  </include>
+
+</launch>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+	<include file="$(find robot_tasarim)/launch/WorldsLaunch/cww.launch"/>
+	<group ns="uav1">
+		<include file="$(find robot_tasarim)/launch/SpawnQuadLaunch/spawn_quadrotor.launch" >
+			<arg name="name" value="uav1" />
+			<arg name="model" value="$(find robot_tasarim)/urdf/quadrotor_hokuyo_utm30lx.gazebo.xacro"/>
+		    	<arg name="controllers" value="
+				controller/attitude
+				controller/velocity
+				controller/position
+			"/>
+		</include>
+	</group>
+	
+ 
+  
+</launch>
